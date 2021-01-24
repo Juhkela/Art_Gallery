@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Barrett and Pakela Art</title>
+  <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="css/form.css"/>
+  <link rel="stylesheet" type="text/css" href="css/grid.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="imgs/logo.png"/>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180252515-1"></script>
+  <script>
+  	 window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'UA-180252515-1');
+  </script>
+
+
+</head>
+<body>
+	<a class = "skip" href="#skip">Skip to Main Content</a>
+	<header>
+		<div class = "logo">
+        	<img src="imgs/logo.png" alt="logo-img" id = "logo" width="450" height="375">
+      	</div>
+			<nav>
+		        <ul class= "nav_links">
+			        <li class="nav_item"><a href="index.html">Home</a></li>
+	          		<li class="nav_item"><a href="about.html">About</a></li>
+	          		<li class="nav_item"><a href="gallery.html">Gallery</a></li>
+	          		<li class="current"><a href="contact.html">Contact</a></li>
+        		</ul>
+
+			</nav>
+	</header>
+
+	<main class="container" id="skip" tabindex="0">
+		<h1>Need to Contact Us?</h1>
+		<p>Welcome to the Contact Page! Here, you have the ability to reach out to us to ask us various questions.
+		   If you are interested in art lessons, buying one of our painting, or just reaching out to learn more about our
+		   website, please fill out the Contact Form below! </p>
+	<form action="mailto:jakela@umich.edu" METHOD="POST" ENCTYPE="text/plain" TARGET="_blank">
+		<fieldset>
+	    	<legend>Contact Form</legend>
+
+	    	<label for="name_id">Your Name</label>
+	    	<input type="text" placeholder="Enter Your Name" id = "name_id" name="Name" required>
+
+	    	<label for="email_id">Your Email</label>
+	    	<input type="email" placeholder="Enter Your Email" id = "email_id" name="Email" required>
+
+	    	<label for="phone_id">Your Phone Number (ex. 123-456-7890)</label>
+	    	<input type="tel" name="Phone" placeholder="123-456-7890" id = "phone_id" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+	    	<div><span>Format: 123-456-7890</span></div>
+
+
+	    	<label for="msg">Leave A Message</label>
+	    	<textarea placeholder="Enter your message" id = "msg" name="Users Message" required></textarea><br>
+	    	<input type="submit" value = "Contact Me">
+	 	</fieldset>
+	</form>
+	 <footer>
+      	<p>University of Michigan School of Information <br/>
+       	&copy; Jack William Pakela - SI339 Portfolio Project 2020</p>
+   	 </footer>
+	</body>
+</html>

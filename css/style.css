@@ -1,0 +1,284 @@
+body{
+  margin: 0;
+  padding: 0;
+  color: black;
+	font-family: 'Open Sans Condensed', sans-serif;
+  background-image: url('../imgs/background.jpg'); 
+}
+
+h1{
+  font-size: 3em;
+  text-align: center;
+  line-height: 2;
+}
+h2{
+  font-size: 2em;
+  text-align: center;
+  padding: 5px;
+}
+li{
+  font-size: 1.5em;
+  padding-top: 8px;
+
+}
+
+p {
+  font-family: sans-serif;
+  font-size: 20px;
+  padding: 0 30px;
+  text-align: center;
+}
+
+a.skip{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+form{
+  background: white;
+}
+
+a.skip:focus{
+  top:20px;
+  color: black;
+  text-decoration-style: solid;
+}
+
+*:focus{
+  border: 2px solid black;
+}
+
+footer{
+  background-color: #C0E8D5;
+  color: black;
+  padding: 25px;
+  text-align: center;
+}
+
+footer p{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+header{
+  background: #C0E8D5;
+  border-bottom: 3px solid #50C7C7;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 35px;
+}
+
+.logo > img{
+  max-height: 300px;
+  max-width: 300px;
+
+}
+
+.about-suzanne-text{
+  text-align: center;
+
+}
+.about-suzanne-painting{
+  grid-column: 1 / span 2;
+}
+
+.suzanne-image{
+  display: flex;
+  justify-content: center;
+}
+
+.gallery{
+  min-height: 300px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+
+.gallery > img{
+  border: 5px #50C7C7;
+  border-style: ridge;
+  margin: 10px;
+  width: 300px;
+}
+
+.nav_links{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.nav_item a{
+  color: black;
+  text-decoration: none;
+}
+
+.nav_item a:hover, a:focus{
+  color: navy;
+  text-decoration: underline;
+}
+
+.nav_links li a:active {
+  background: #f1d74c;
+  color: #ffffff;
+}
+
+ul li a.current
+{
+  background-color: blue;
+}
+
+.current{
+  text-transform: uppercase;
+}
+
+.parallax img {
+  display: none;
+}
+
+@media screen and (min-width: 850px){ /* Desktop View */
+
+  header{ 
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  #main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery{
+    min-height: 600px;
+
+  }
+  .gallery > img{
+    border-width: 8px
+    border-style: ridge;
+    border-color: #d3d3d3;
+
+  }
+  .logo > img{
+    max-height: 375px;
+    max-width: 450px;
+}
+
+  .parallax {
+    background-image: url("../imgs/parallax.jpg");
+    min-height: 300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+  .parallax img{
+    display: block;
+    position: relative;
+    margin: auto;
+}
+
+  @keyframes brush-movement{ /* I love W3 Schools! */
+    0%   {
+      top:0px;
+    } 
+    50%  {
+      top: 200px;
+    }
+    100% {
+      top:0px;
+    }
+}
+
+  #animation{
+    animation-name: brush-movement;
+    animation-delay: 0.5s;
+    animation-duration: 2.5s;
+    animation-iteration-count: 4;
+  }
+
+  h1{
+    font-size: 3em;
+    text-align: center;
+    line-height: 2;
+  }
+  h2{
+    font-size: 2em;
+    text-align: center;
+    padding: 5px;
+  }
+  li{
+    font-size: 1.5em;
+    padding-top: 8px;
+
+  }
+
+  p {
+    font-family: sans-serif;
+    font-size: 25px;
+    padding: 0 30px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+   header{ 
+    justify-content: space-around;
+    flex-direction: row;
+  }
+
+  #main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery{
+    min-height: 600px;
+  }
+
+  .logo > img{
+    max-height: 210px;
+    max-width: 210px;
+}
+
+  h1{
+    font-size: 2em;
+    text-align: center;
+    line-height: 2;
+  }
+  h2{
+    font-size: 1.5em;
+    text-align: center;
+    padding: 5px;
+  }
+  li{
+    font-size: 1.5em;
+    padding-top: 8px;
+
+  }
+
+  p {
+    font-family: sans-serif;
+    font-size: 15px;
+    padding: 0 30px;
+    text-align: center;
+  }
+
+
+}
+
+@media screen and (prefers-reduced-motion){ /* Reduced Motion Media Query */
+
+  #animation {
+    animation: none;
+  }
+}
